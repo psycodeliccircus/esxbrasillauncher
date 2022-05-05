@@ -37,6 +37,7 @@
     "build": "yarn run clean && electron-builder --win --linux"
   },
   "devDependencies": {
+    "auto-changelog": "^2.4.0",
     "electron": "^9.4.4",
     "electron-builder": "^23.0.3",
     "electron-icon-maker": "0.0.5",
@@ -93,6 +94,12 @@
     "directories": {
       "buildResources": "resources",
       "output": "dist/"
+    },
+    "auto-changelog": {
+      "hideCredit": true,
+      "package": true,
+      "unreleased": true,
+      "output": "changelog.md"
     },
     "publish": {
       "provider": "github",
