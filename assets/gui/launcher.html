@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Favicons -->
+  <link href="nui/assets/img/Logo.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="nui/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="nui/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="nui/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="nui/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="nui/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="nui/assets/css/style.css?v=1.5" rel="stylesheet">
+</head>
+
+<body>
+<header id="header">
+    <div id="titlebar">
+        <div id="drag-region">
+            <div id="window-title">
+                <span id="windowTitle">ESXBrasil Launcher</span>
+            </div>
+        </div>
+        <div id="window-controls">
+            <div class="button" id="min-button" alt="" title="Min">
+                <span>&#xE921;</span>
+            </div>
+            <div class="button" id="max-button" alt="" title="Max">
+                <span>&#xE922;</span>
+            </div>
+            <div class="button" id="restore-button" alt="" title="Restore">
+                <span>&#xE923;</span>
+            </div>
+            <div class="button" id="close-button" alt="" title="Close">
+                <span>&#xE8BB;</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+        <div id="logo" class="pull-left">
+        <a href="#" class="scrollto"><img src="nui/assets/img/gradient.png" alt="" title="Logo"></a>
+        </div>
+
+        <nav id="nav-menu-container">
+        <ul class="nav-menu">
+            <li><a href="#" id="forum" alt="" title="Forums">Forums</a></li>
+            <li><a href="#" id="fotos" alt="" title="Fotos">Fotos</a></li>
+            <li><a href="#" id="estatiscas" alt="" title="Estatiscas">Estatiscas</a></li>
+            <li><a href="#" id="loja" alt="" title="Loja">Loja</a></li>
+            <li><a href="#" id="regras" alt="" title="Regras">Regras</a></li>
+            <li class="buy-tickets"><a href="#" id="checkUpdate" alt="" title="Atualizações">Atualizações</a></li>
+        </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</header><!-- End Header -->
+
+    <!-- ======= Intro Section ======= -->
+<section id="intro">
+    <div id="youtubea" style="height: 100%; width: 100%;transform: scale(1.1);filter: blur(20px);"></div>
+    <div class="intro-container wow fadeIn">
+        <h1 class="mb-4 pb-0">ESXBrasil RP<br></h1>
+        <h1 class="mb-4 pb-0">www.esxbrasil.website</h1>
+        <a href="#" class="play-btn mb-4" id="playNow" alt="" title="Entra na city!"></a>
+        <div class="enable_music">Use o <strong>spacebar</strong> para da stop na musica!</div>
+    </div>
+</section><!-- End Intro Section -->
+
+<a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- Template Main JS File -->
+  <script>window.$ = window.jQuery = require('./nui/assets/vendor/jquery/jquery.min.js');</script>
+  <script src="js/window.js"></script>
+  <script src="nui/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="nui/assets//vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="nui/assets//vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="nui/assets//vendor/php-email-form/validate.js"></script>
+  <script src="nui/assets//vendor/wow/wow.min.js"></script>
+  <script src="nui/assets//vendor/venobox/venobox.min.js"></script>
+  <script src="nui/assets//vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="nui/assets//vendor/superfish/superfish.min.js"></script>
+  <script src="nui/assets//vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script async src="https://www.youtube.com/iframe_api"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
+  <script src="nui/assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        var ipc = require('electron').ipcRenderer;
+        var player;
+        var play = true;
+        var funcsAll = true;
+        updatePlayersx = null
+        updatePlayerListDisplayx = null
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtubea', {
+            videoId: 'w7N-EPg63uY', // YouTube Video ID
+            playerVars: {
+                autoplay: 1,
+                controls: 0,
+                showinfo: 0,
+                modestbranding: 0,
+                loop: 1,
+                fs: 0,
+                cc_load_policy: 0,
+                iv_load_policy: 0,
+                autohide: 0
+            },
+            events: {
+                onReady: function(e) {
+                    e.target.seekTo(0);
+                    e.target.playVideo();
+                    e.target.setVolume(20);
+                },
+                onStateChange: function(e) {
+                    if (e.data === YT.PlayerState.ENDED) {
+                        player.playVideo();
+                    }
+                }
+            }
+            });
+        }
+        setTimeout(function() {
+            if (!player) {
+                onYouTubeIframeAPIReady();
+            }
+         }, 5000)
+
+        function destroyEverything() {
+            if (player) {
+                player.destroy();
+                player = null;
+            }
+            funcsAll = false;
+        }
+
+        function reEnableEverything() {
+            funcsAll = true;
+            updatePlayersx();
+            updatePlayerListDisplayx();
+            onYouTubeIframeAPIReady();
+        }
+
+        window.addEventListener('keydown', function(e) {
+            if(e.keyCode == 32 && e.target == document.body) {
+                if (play) {
+                    play = false;
+                    player.setVolume(0);
+                } else {
+                    player.setVolume(20);
+                    play = true;
+                }
+                e.preventDefault();
+            }
+            if(e.keyCode == 119 && e.target == document.body) {
+                ipc.send('changeDetection');
+                e.preventDefault();
+            }
+        });
+
+        $(document).ready(function(){
+            var thePlayerOnline = 0;
+            var thePlayersInGame = {};
+
+            function shuffle(a) {
+                for (let i = a.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [a[i], a[j]] = [a[j], a[i]];
+                }
+                return a;
+            }
+
+            function updatePlayers() {
+                if (funcsAll == true) {
+                    $.post("http://localhost/online.php", function(data) {
+                        data = JSON.parse(data);
+                        thePlayerOnline = data.online;
+                        thePlayersInGame = data.players;
+                        $("#onlinePlayers").html(thePlayerOnline);
+                    });
+                    setTimeout(updatePlayers, 5000)
+                }
+            }
+
+            function updatePlayerListDisplay() {
+                if (funcsAll == true) {
+                    var theHCount = 1;
+                    var theFinalWord = "";
+                    shuffle(thePlayersInGame);
+                    $.each(thePlayersInGame, function(index, value) {
+                        if (theHCount <= 7) {
+                            theFinalWord = value.name + ", " + theFinalWord
+                            theHCount++;
+                        }
+                    })
+                    $("#displayPlayers").html(theFinalWord+" and others");
+                    setTimeout(updatePlayerListDisplay, 2000);
+                }
+            }
+            updatePlayersx = updatePlayers
+            updatePlayerListDisplayx = updatePlayerListDisplay
+
+            $("#playNow").click(function(){
+                Swal.fire({
+                    title: 'Checking..',
+                    html: 'Please wait. Checking your computer.',
+                    allowOutsideClick: false,
+                    onBeforeOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+                ipc.send('preRequirementsCheck');
+            });
+            //atualização
+            $("#checkUpdate").click(function(){
+                ipc.send('checkUpdate');
+            });
+            //regras
+            $("#regras").click(function () {
+                ipc.send('regras');
+            });
+            //loja
+            $("#loja").click(function () {
+                ipc.send('loja');
+            });
+            //estatiscas
+            $("#estatiscas").click(function () {
+                ipc.send('estatiscas');
+            });
+            //fotos
+            $("#fotos").click(function () {
+                ipc.send('fotos');
+            });
+            //forum
+            $("#forum").click(function () {
+                ipc.send('forum');
+            });
+
+
+
+            updatePlayers();
+            updatePlayerListDisplay();
+        });
+    </script>
+
+</body>
+
+</html>
