@@ -29,9 +29,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "clean": "rimraf dist",
+    "changelog": "auto-changelog -o README.md",
     "build:win": "yarn run clean && electron-builder --win",
     "icon": "rimraf assets/generated && electron-icon-maker --input=assets/gui/nui/assets/img/Logo.png --output=assets/generated",
-    "release:win": "yarn run clean && electron-builder --win -p always",
+    "release:win": "yarn run clean && yarn run changelog && electron-builder --win -p always",
     "release:linux": "yarn run clean && electron-builder --linux -p always",
     "dist:dir": "yarn run clean && electron-builder -mwl",
     "build": "yarn run clean && electron-builder --win --linux"
