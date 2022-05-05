@@ -99,7 +99,7 @@
       "hideCredit": true,
       "package": true,
       "unreleased": true,
-      "output": "changelog.md"
+      "output": "README.md"
     },
     "publish": {
       "provider": "github",
