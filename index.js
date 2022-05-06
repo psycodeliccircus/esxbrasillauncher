@@ -380,7 +380,11 @@ client.on('connected', () => {
             largeImageKey: 'asdasdg',
             largeImageText: 'Launcher ESXBrasil',
             state: 'Server ESXBrasilRP',
-            instance: true
+            instance: true,
+            buttons: [
+                { "label": "Discord", "url": "https://discord.gg/h269JAMTFy" },
+                { "label": "Download Launcher", "url": "https://github.com/psycodeliccircus/esxbrasillauncher/releases" }
+            ]
         });
     }, 15e3);
 

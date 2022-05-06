@@ -2,7 +2,11 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.2](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.1...v0.1.2)
+
 #### [v0.1.1](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.0...v0.1.1)
+
+> 6 May 2022
 
 - Atualizações [`212e840`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/212e84012f0b99f1ada653dfb7406e32b865aa3b)
 - Delete electron-builder.yml [`42305a2`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/42305a2f4290413c4e7830a64e3ebdfc966d2799)
