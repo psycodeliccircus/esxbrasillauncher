@@ -1,6 +1,6 @@
 {
   "name": "esxbrasillauncher",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Launcher para FiveM.",
   "main": "index.js",
   "repository": {
@@ -8,23 +8,14 @@
     "url": "git+https://github.com/psycodeliccircus/esxbrasillauncher"
   },
   "author": {
-    "name": "psycodeliccircus",
-    "email": "psycodeliccircus@users.noreply.github.com",
+    "name": "ESXBrasil",
+    "email": "esxbrasil2021@gmail.com",
     "url": "https://github.com/psycodeliccircus/esxbrasillauncher"
   },
-  "license": "ISC",
-  "dependencies": {
-    "check-internet-connected": "^2.0.5",
-    "electron-dl": "^3.0.0",
-    "electron-is-dev": "^1.2.0",
-    "electron-log": "^4.1.2",
-    "electron-reload": "^2.0.0-alpha.1",
-    "electron-updater": "^4.3.1",
-    "nan": "^2.14.1",
-    "node-gyp": "^6.1.0",
-    "path": "^0.12.7",
-    "ps-node": "^0.1.6"
+  "bugs": {
+    "url": "https://github.com/psycodeliccircus/esxbrasillauncher/issues"
   },
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
@@ -37,6 +28,18 @@
     "dist:dir": "yarn run clean && electron-builder -mwl",
     "build": "yarn run clean && electron-builder --win --linux"
   },
+  "dependencies": {
+    "check-internet-connected": "^2.0.5",
+    "electron-dl": "^3.0.0",
+    "electron-is-dev": "^1.2.0",
+    "electron-log": "^4.1.2",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-updater": "^4.3.1",
+    "nan": "^2.14.1",
+    "node-gyp": "^6.1.0",
+    "path": "^0.12.7",
+    "ps-node": "^0.1.6"
+  },
   "devDependencies": {
     "auto-changelog": "^2.4.0",
     "electron": "^9.4.4",
@@ -44,70 +47,5 @@
     "electron-icon-maker": "0.0.5",
     "electron-rebuild": "^3.2.7",
     "rimraf": "^3.0.2"
-  },
-  "build": {
-    "productName": "ESXBrasil-Launcher",
-    "appId": "com.github.psycodeliccircus.esxbrasillauncher",
-    "dmg": {
-      "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
-      "contents": [
-        {
-          "type": "link",
-          "path": "/Applications",
-          "x": 410,
-          "y": 150
-        },
-        {
-          "type": "file",
-          "x": 130,
-          "y": 150
-        }
-      ]
-    },
-    "nsis": {
-      "installerIcon": "build/icon.ico",
-      "uninstallerIcon": "build/uninstall.ico",
-      "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "runAfterFinish": true,
-      "createStartMenuShortcut": true,
-      "packElevateHelper": true,
-      "createDesktopShortcut": true,
-      "shortcutName": "ESXBrasil Launcher",
-      "license": "eula.txt"
-    },
-    "mac": {
-      "target": "dmg",
-      "icon": "assets/generated/icons/win/icon.ico"
-    },
-    "win": {
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        }
-      ],
-      "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
-      "icon": "assets/generated/icons/win/icon.ico"
-    },
-    "directories": {
-      "buildResources": "resources",
-      "output": "dist/"
-    },
-    "auto-changelog": {
-      "hideCredit": true,
-      "package": true,
-      "unreleased": true,
-      "output": "README.md"
-    },
-    "publish": {
-      "provider": "github",
-      "owner": "psycodeliccircus",
-      "repo": "esxbrasillauncher",
-      "releaseType": "release",
-      "updaterCacheDirName": "esxbrasillauncher-updater"
-    }
   }
 }
