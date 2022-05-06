@@ -38,7 +38,7 @@ checkInternetConnected()
 const config = {
     timeout: 5000, //timeout connecting to each server, each try
     retries: 5,//number of retries to do before failing
-    domain: 'https://apple.com',//the domain to check DNS record of
+    domain: 'https://www.google.com',//the domain to check DNS record of
 }
 checkInternetConnected(config);
 
@@ -361,3 +361,27 @@ autoUpdater.on('update-downloaded', info => {
     autoUpdater.quitAndInstall();
 })
 
+// System Discord Dev
+
+// DiscordModules
+const client = require('discord-rich-presence')('798575083424972871')
+
+let startTimestamp = new Date();
+
+// discordClient
+client.on('connected', () => {
+
+    details = 'Entrando no servidor...';
+
+    setInterval(() => {
+        client.updatePresence({
+            details: details,
+            startTimestamp,
+            largeImageKey: 'asdasdg',
+            largeImageText: 'Launcher ESXBrasil',
+            state: 'Server ESXBrasilRP',
+            instance: true
+        });
+    }, 15e3);
+
+});
