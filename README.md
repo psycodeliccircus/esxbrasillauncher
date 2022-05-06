@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.2](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.2...v0.1.2)
+
+- Update index.js [`7dee42d`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/7dee42d6b8dd5797c201d2c7efbeee44b0ba56be)
+
 #### [v0.1.2](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.1...v0.1.2)
+
+> 6 May 2022
 
 #### [v0.1.1](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.0...v0.1.1)
 
