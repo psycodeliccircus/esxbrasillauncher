@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.1.2](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.2...v0.1.2)
+#### [v0.1.3](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.2...v0.1.3)
 
 - Update package.json [`3b87f74`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/3b87f74ce6c654e3454556cd57837a30b6787097)
 - Update README.md [`4165c78`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/4165c78f60e10ed53f60ffeb3d7c23815e82e61f)
