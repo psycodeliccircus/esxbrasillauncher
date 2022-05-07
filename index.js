@@ -34,7 +34,7 @@ checkInternetConnected()
         if (process.platform !== 'darwin') {
             app.quit()
         }
-        });;
+    });;
 const config = {
     timeout: 5000, //timeout connecting to each server, each try
     retries: 5,//number of retries to do before failing
@@ -210,6 +210,7 @@ function startBootstrapApp () {
         log.info('Bootstrap window is ready.')
         mainWindow.show()
         autoUpdater.checkForUpdates()
+        setActivity()
         appTray.on('click', () => {
             mainWindow.isVisible() ? mainWindow.hide() : mainWindow.show()
         })
@@ -361,32 +362,49 @@ autoUpdater.on('update-downloaded', info => {
     autoUpdater.quitAndInstall();
 })
 
+
 // System Discord Dev
 
 // DiscordModules
-const client = require('discord-rich-presence')('798575083424972871')
 
-let startTimestamp = new Date();
+function setActivity() {
 
-// discordClient
-client.on('connected', () => {
+    const client = require('discord-rich-presence')('948418030235443222')
+    client.on("error", _ => true);// Ignore error: They happen only when the discord client is not installed
 
-    details = 'Entrando no servidor...';
-
-    setInterval(() => {
+    // discordClient
+    client.on('connected', () => {
+        console.log("Launcher ESXBrasil!");
+        startTimestamp = new Date();
         client.updatePresence({
-            details: details,
+            state: "Launcher ESXBrasil",
             startTimestamp,
-            largeImageKey: 'asdasdg',
-            largeImageText: 'Launcher ESXBrasil',
-            state: 'Server ESXBrasilRP',
+            largeImageKey: "logo",
             instance: true,
             buttons: [
-                { "label": "Discord", "url": "https://discord.gg/h269JAMTFy" },
-                { "label": "Download Launcher", "url": "https://github.com/psycodeliccircus/esxbrasillauncher/releases" }
+                { "label": "Website", "url": "https://esxbrasil.website" },
+                { "label": "Forum", "url": "https://forum.esxbrasil.website" }
             ]
         });
-    }, 15e3);
 
-});
+        setInterval(() => {
+            console.log("Server ESXBrasil!");
+            client.updatePresence({
+                state: "Server ESXBrasil",
+                startTimestamp,
+                largeImageKey: 'logo',
+                largeImageText: "ESXBrasil",
+                smallImageKey: 'online',
+                smallImageText: "Servidor online!",
+                instance: true,
+                buttons: [
+                    { "label": "Discord", "url": "https://discord.gg/h269JAMTFy" },
+                    { "label": "Download Launcher", "url": "https://github.com/psycodeliccircus/esxbrasillauncher/releases" }
+                ]
+            });
+        }, 35500);
+    });
+}
+
+
 // final System Discord Dev
