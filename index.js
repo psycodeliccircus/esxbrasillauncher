@@ -199,6 +199,8 @@ function startBootstrapApp () {
     const contextMenu = Menu.buildFromTemplate([
         { label: 'ESXBrasilRP v' + app.getVersion() },
         { type: 'separator' },
+        { label: 'Sobre', click() { sobre() } },
+        { type: 'separator' },
         { label: 'Discord', click() { shell.openExternal('https://discord.gg/h269JAMTFy'); } },
         { type: 'separator' },
         { label: 'Atualização', click() { autoUpdater.checkForUpdates() } },
@@ -224,8 +226,20 @@ ipc.on('checkUpdate', function() {
     autoUpdater.checkForUpdates()
 })
 
+
+function sobre() {
+    mainWindow.webContents.executeJavaScript(`Swal.fire({
+        title: 'Sobre a ESXBrasil!',
+        text: 'Samos uma equipe de programadores focados em melhora o RolePlay e muito mais!',
+        imageUrl: 'https://www.esx.com.br/assets/img/thumbnail_default.png',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Sobre a ESXBrasil!',
+    })`)
+}
+
 ipc.on('regras', function () {
-    log.log("Pagina Sobre")
+    log.log("Pagina Regras")
     mainWindow.webContents.executeJavaScript(`Swal.fire({
         title: 'Pagina em manutenção!',
         text: 'Volte mais tarde!',
