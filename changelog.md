@@ -2,8 +2,6 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.1.7](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.7...v0.1.7)
-
 #### [v0.1.7](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.6...v0.1.7)
 
 > 10 May 2022
