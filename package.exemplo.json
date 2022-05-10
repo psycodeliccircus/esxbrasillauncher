@@ -22,7 +22,7 @@
     "clean2": "rimraf README.md",
     "changelog": "yarn run clean2 && auto-changelog -p -o README.md --hide-credit",
     "build:win": "yarn run clean && electron-builder --win",
-    "release:win": "yarn run clean && yarn run changelog && electron-builder --win -p always"
+    "release:win": "yarn run clean && yarn run changelog && set GH_TOKEN=<seu token do github aqui> && electron-builder --win -p always"
   },
   "dependencies": {
     "check-internet-connected": "^2.0.5",

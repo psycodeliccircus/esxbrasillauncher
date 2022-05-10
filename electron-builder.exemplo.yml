@@ -61,6 +61,4 @@ publish:
   provider: github
   owner: psycodeliccircus
   repo: esxbrasillauncher
-  releaseType: release
-  token: <seu token do github aqui>
   updaterCacheDirName: esxbrasillauncher-updater
