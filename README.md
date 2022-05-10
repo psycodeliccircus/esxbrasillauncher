@@ -17,6 +17,12 @@ Launcher personalizado que permite aos usuários ingressar em servidores modific
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.1.7](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.6...v0.1.7)
+
+- Update README.md [`ab76dc0`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/ab76dc0326d792dfce8b0db6afe7a96706323562)
+- Delete pkg directory [`1153b78`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/1153b78ade0522064c719d165c0412edeea839da)
+- Atualização [`02f39f3`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/02f39f3c9def8c87dae3d6775908975d413056f8)
+
 #### [v0.1.6](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.5...v0.1.6)
 
 > 10 May 2022
