@@ -19,8 +19,8 @@
   "scripts": {
     "start": "electron .",
     "clean": "rimraf dist",
-    "clean2": "rimraf README.md",
-    "changelog": "yarn run clean2 && auto-changelog -p -o README.md --hide-credit",
+    "clean2": "rimraf changelog.md",
+    "changelog": "yarn run clean2 && auto-changelog -p -o changelog.md --hide-credit",
     "build:win": "yarn run clean && electron-builder --win",
     "release:win": "yarn run clean && yarn run changelog && set GH_TOKEN=<seu token do github aqui> && electron-builder --win -p always"
   },
