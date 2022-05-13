@@ -1,6 +1,6 @@
 {
   "name": "esxbrasillauncher",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Launcher para FiveM.",
   "main": "index.js",
   "repository": {
