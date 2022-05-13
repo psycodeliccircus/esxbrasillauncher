@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [v0.1.8](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.7...v0.1.8)
 
+> 13 May 2022
+
 - Update [`954a9a4`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/954a9a4412d75b38b3e83a52e832c4ab18d43c26)
 - changelog [`317ab4a`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/317ab4ab27c69c154e2972ff236c91bf394e825b)
 - Update changelog.md [`7f7bce7`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/7f7bce7d4438fa558922a7c4f1dc8ca9d3c81525)
