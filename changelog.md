@@ -4,9 +4,9 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [v0.1.9](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.8...v0.1.9)
 
+- Update changelog.md [`c01ff05`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/c01ff05329701c0a0bef8705df0a192fe36ae318)
 - Update changelog.md [`1a6dee7`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/1a6dee74d03341b229c836570aeff548f59300f7)
 - Update package.exemplo.json [`e5611a7`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/e5611a70d759f2926e68631029912142a4ae5486)
-- Update launcher.html [`f9fbdef`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/f9fbdefe0de907871a5ab1474f8f7a0fc9f34e96)
 
 #### [v0.1.8](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.1.7...v0.1.8)
 
