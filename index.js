@@ -196,16 +196,36 @@ function startBootstrapApp () {
 
     appTray = new Tray(__dirname + '/assets/generated/icons/win/icon.ico');
     appTray.setToolTip("ESXBrasilRP")
+    const nativeImage = require('electron').nativeImage
     const contextMenu = Menu.buildFromTemplate([
-        { label: 'ESXBrasilRP v' + app.getVersion() },
+        { 
+            label: 'ESXBrasilRP v' + app.getVersion(),
+            icon: nativeImage.createFromPath(__dirname + '/assets/generated/icons/png/16x16.png').resize({ width: 16 }) 
+        },
         { type: 'separator' },
-        { label: 'Sobre', click() { sobre() } },
+        { 
+            label: 'Sobre',
+            icon: nativeImage.createFromPath(__dirname + '/assets/generated/icons/png/sobre.png').resize({ width: 16 }),  
+            click() { sobre() } 
+        },
         { type: 'separator' },
-        { label: 'Discord', click() { shell.openExternal('https://discord.gg/h269JAMTFy'); } },
+        { 
+            label: 'Discord',
+            icon: nativeImage.createFromPath(__dirname + '/assets/generated/icons/png/discord.png').resize({ width: 16 }), 
+            click() { shell.openExternal('https://discord.gg/h269JAMTFy'); } 
+        },
         { type: 'separator' },
-        { label: 'Atualização', click() { autoUpdater.checkForUpdates() } },
+        { 
+            label: 'Atualização',
+            icon: nativeImage.createFromPath(__dirname + '/assets/generated/icons/png/update.png').resize({ width: 16 }), 
+            click() { autoUpdater.checkForUpdates() } 
+        },
         { type: 'separator' },
-        { label: 'Sair do Launcher', click() { app.quit() } },
+        { 
+            label: 'Sair do Launcher',
+            icon: nativeImage.createFromPath(__dirname + '/assets/generated/icons/png/quit.png').resize({ width: 16 }), 
+            click() { app.quit() } 
+        },
     ])
     appTray.setContextMenu(contextMenu)
     mainWindow.webContents.once('dom-ready', () => {
