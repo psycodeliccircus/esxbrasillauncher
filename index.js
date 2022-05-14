@@ -5,7 +5,7 @@ Developer/s: Renildo Marcio (renildomrc@gmail.com)
 All Reserve Rights ESXBrasil 2015 - 2022
 */
 
-const {app, BrowserWindow, nativeTheme, ipcMain, dialog, shell, clipboard, Menu, Tray} = require("electron")
+const { app, BrowserWindow, nativeTheme, ipcMain, dialog, shell, clipboard, Menu, Tray, Notification} = require("electron")
 const {download} = require("electron-dl")
 const {autoUpdater} = require('electron-updater')
 const log = require('electron-log')
@@ -34,9 +34,13 @@ checkInternetConnected()
     .catch((ex) => {
         console.log(ex); // cannot connect to a server or error occurred.
         log.info("internet off.")
-        if (process.platform !== 'darwin') {
-            app.quit()
-        }
+        mainWindow.webContents.executeJavaScript(`Swal.fire({
+        title: 'Sem conexão!',
+        text: 'Você esta sem internet!',
+        imageAlt: 'Sem conexão',
+        background: '#000',
+        color: '#fff',
+        })`)
     });;
 const config = {
     timeout: 5000, //timeout connecting to each server, each try
