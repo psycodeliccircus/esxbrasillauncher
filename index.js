@@ -259,7 +259,7 @@ function sobre() {
     mainWindow.webContents.executeJavaScript(`Swal.fire({
         title: 'Sobre a ESXBrasil!',
         text: 'Samos uma equipe de programadores focados em melhora o RolePlay e muito mais!',
-        imageUrl: 'https://www.esx.com.br/assets/img/thumbnail_default.png',
+        imageUrl: 'https://esxbrasilrp.github.io/thumbnail_default.png',
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: 'Sobre a ESXBrasil!',
@@ -271,7 +271,7 @@ ipc.on('sobre', function () {
     mainWindow.webContents.executeJavaScript(`Swal.fire({
         title: 'Sobre a ESXBrasil!',
         text: 'Samos uma equipe de programadores focados em melhora o RolePlay e muito mais!',
-        imageUrl: 'https://www.esx.com.br/assets/img/thumbnail_default.png',
+        imageUrl: 'https://esxbrasilrp.github.io/thumbnail_default.png',
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: 'Sobre a ESXBrasil!',
