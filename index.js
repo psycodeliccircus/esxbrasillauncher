@@ -5,7 +5,7 @@ Developer/s: Renildo Marcio (renildomrc@gmail.com)
 All Reserve Rights ESXBrasil 2015 - 2022
 */
 
-const {app, BrowserWindow, dialog, shell, clipboard, Menu, Tray} = require("electron")
+const {app, BrowserWindow, nativeTheme, ipcMain, dialog, shell, clipboard, Menu, Tray} = require("electron")
 const {download} = require("electron-dl")
 const {autoUpdater} = require('electron-updater')
 const log = require('electron-log')
@@ -16,9 +16,12 @@ var ipc = require('electron').ipcMain
 var fs = require('fs')
 var ps = require('ps-node')
 var process = require('process')
+const RightMenuapp = require('./right-menu-config')
 
 let mainWindow = null
 var disableAutoDetectionFiveM = false
+
+let rightMenu = Menu.buildFromTemplate(RightMenuapp)
 
 let timerInterval
 
@@ -170,6 +173,11 @@ function startBootstrapApp () {
 		}
     })
 
+    //Load Right click menu
+    mainWindow.webContents.on('context-menu', e => {
+        rightMenu.popup(mainWindow)
+    })
+
     mainWindow.webContents.on("devtools-opened", () => {
         if (!isUserDeveloper) {
             mainWindow.webContents.closeDevTools();
@@ -257,6 +265,18 @@ function sobre() {
         imageAlt: 'Sobre a ESXBrasil!',
     })`)
 }
+
+ipc.on('sobre', function () {
+    log.log("Pagina sobre")
+    mainWindow.webContents.executeJavaScript(`Swal.fire({
+        title: 'Sobre a ESXBrasil!',
+        text: 'Samos uma equipe de programadores focados em melhora o RolePlay e muito mais!',
+        imageUrl: 'https://www.esx.com.br/assets/img/thumbnail_default.png',
+        imageWidth: 400,
+        imageHeight: 200,
+        imageAlt: 'Sobre a ESXBrasil!',
+    })`)
+})
 
 ipc.on('regras', function () {
     log.log("Pagina Regras")
