@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.2.3](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.2.2...v0.2.3)
+
+- Update 0.2.3 [`0351cfb`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/0351cfb41e2edc0d1d02459a3935f3f3dcf2a4c0)
+- Create SECURITY.md [`eef848c`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/eef848cc15d93f8b51d125ee427c89b717c6cbfd)
+
 #### [v0.2.2](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.2.1...v0.2.2)
+
+> 14 May 2022
+
+- Update changelog.md [`8c03c72`](https://github.com/psycodeliccircus/esxbrasillauncher/commit/8c03c72741de5157b068dc6d26fd7bcbf9401a85)
 
 #### [v0.2.1](https://github.com/psycodeliccircus/esxbrasillauncher/compare/v0.2.0...v0.2.1)
 
