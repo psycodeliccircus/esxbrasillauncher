@@ -5,6 +5,4 @@
 /dev-app-update.yml
 /.travis.yml
 /appveyor.yml
-/electron-builder.yml
 /pkg
-/package.json
