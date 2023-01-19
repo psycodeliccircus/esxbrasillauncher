@@ -1,8 +1,2 @@
-/package-lock.json
 /node_modules
 /dist
-/app-update.yml
-/dev-app-update.yml
-/.travis.yml
-/appveyor.yml
-/pkg
